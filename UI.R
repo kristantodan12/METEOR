@@ -438,7 +438,7 @@ ui <- shinyUI(navbarPage(
 ##########################
 ### Your Own Pipeline ###
 ##########################               
-  tabPanel("Your Own Pipeline", value = "DIY",  style = "display: none;",
+  tabPanel("Your Own Pipeline", value = "DIY",
           sidebarLayout(
 
             sidebarPanel( width = 3,
@@ -451,7 +451,10 @@ ui <- shinyUI(navbarPage(
                           obtain a table by clicking count. You may specify whether the order of 
                           their pipeline should be considered. If this parameter is disabled, the a
                           lgorithm will identify all articles that have employed the selected steps 
-                          regardless of the order. <br></h5>"),
+                          regardless of the order.<br><br>
+                          A plot of the distribution of the pipeline usage is also shown. The grey
+                          bars are the number of total articles for each yeat while the blue line 
+                          represents the number of articles used the pipelines for each year. <br></h5>"),
                           selectInput("selectStep_DIY",
                                       label   = "Select the step you want to include",
                                       choices =  list('Software',
